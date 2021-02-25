@@ -26,14 +26,18 @@ hr {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Georgia,serif
 }
 
 footer {
   height: 2em;
-  position: fixed;
   bottom: 0px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eee;
+  height: 4vh;
+  border-top: 1px solid #ddd;
 }
 
 .centerMargins{
@@ -43,36 +47,12 @@ footer {
   overflow-y: scroll;
   overflow-y: overlay;
   overflow-x: hidden;
+  min-height: calc(100% - 4vh);
 }
 
-#blog, #login, #blogPost, header, #error404, #social, #about{
+ header, #error404, #home, #people {
   width: 100%;
   max-width: 720px;
-}
-
-#blogPost{
-  text-align: left;
-  padding-bottom: 1rem;
-}
-
-.postBody table, .blogPreviewBody table, #blogPostEditor > .row:last-child table {
-  min-width: 100%;
-}
-
-.postBody td hr, .blogPreviewBody td hr, #blogPostEditor > .row:last-child td hr {
-  margin-left: -1px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: -1px;
-  border-bottom:  1px solid black;
-}
-
-#blogPost h3{
-  width: 100%;
-}
-
-.blogPostPreview{
-  text-align: left;
 }
 
 body, .App, .app div{
@@ -80,16 +60,11 @@ body, .App, .app div{
 }
 
 .page {
-  height: 78vh;
+  height: 90vh;
   overflow-y: scroll;
   overflow-y: overlay;
   padding-top: 2vh;
   text-align: left;
-}
-
-header {
-  height: 14vh;
-  overflow: hidden;
 }
 
 /* header .left {
@@ -102,9 +77,10 @@ header .right {
 
 header h1{
   margin-top: 0px;
-  padding-top: 2vh;
   margin-bottom: 0vh;
-  font-size: 4vh;
+  vertical-align: middle;
+  margin-left: 15px;
+  font-size: 2vh;
 }
 
 
@@ -259,11 +235,10 @@ header h1{
 
 
 header {
-  height: 15vh;
+  height: 6vh;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  font-family: Menlo, Monaco, monospace, "Consolas", "Courier New"
 }
 
 header p {
@@ -271,16 +246,25 @@ header p {
 }
 
 header img{
-  display: none;
   margin-top: 1vh;
-  max-width: 100%;
-  height: auto;
-  max-height: 13vh;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
-  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+  margin-bottom: 1vh;
+  height: 4vh;
+  max-width: 7vh;
+  /* padding-right: 25px;
+  border-right: 5px solid black; */
+}
+
+header span {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 4vh;
+  width: calc(100% - 7vh);
+  /* text-align: center; */
   float: right;
+  display: flex;
+  align-items: center;
+  /* padding-right: 25px;
+  border-right: 5px solid black; */
 }
 
 /* #headerImage {
@@ -290,7 +274,7 @@ header img{
 } */
 
 #headerImage > div{
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .left {
@@ -305,45 +289,55 @@ nav {
   background-color: #f8f8f8;
 }
 
-.portfolioProject {
+nav div {
+  max-width: 720px;
+  text-align: left;
+  margin: 1vh auto;
+}
+
+footer div {
+  max-width: 720px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.personCard {
   padding: 2%;
 
   overflow: hidden;
   text-align: left;
-  border: 10px solid white;
+  border: 1px solid #eee;
   background-color: #f8f8f8
+  
 }
 
-.portfolioProject p {
+.personCard p {
   margin-bottom: 0;
 }
 
-.portfolioProject a p {
+.personCard a p {
   margin-top: 5px;
 }
 
-.portfolioProject .left {
-  width: 70%;
+.personCard .right {
+  width: 82%;
   height: 100%;
 }
 
-.portfolioProject .right {
-  width: 25%;
+.personCard .left {
+  width: 15%;
   height: 100%;
   position: relative;
 }
 
-.portfolioProject .right img {
+.personCard .left img {
   max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
 }
 
 .projectSection {
@@ -357,8 +351,9 @@ nav {
   padding-right: 15px;
 }
 
-nav > hr:first-of-type {
+nav hr {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 nav a {
@@ -378,112 +373,6 @@ ul, li {
   text-align: left;
 }
 
-/* .readMore {
-  color: white;
-  background-color: #dc3545;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: inline-block;
-  width: 25%;
-  text-align: center;
-} */
-
-.readMore, .portfolioProject a {
-  margin-top: 15px;
-  display: inline-block;
-}
-
-.blogPostPreview .badge {
-  margin-bottom: 6px;
-}
-
-.blogPostPreview h3 {
-  width: 100%;
-}
-
-a, .failedLoad span, #error404 span{
-  color: #dc3545;
-}
-
-.failedLoad span:hover, #error404 span:hover{
-  color: #0056b3;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-#blogPost img, .blogPostPreview img {
-  /* display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* float: left; */
-  /* max-height: 50vh;
-  width: auto;
-  max-width: 100%; */ 
-  width: 100%;
-}
-
-.blogPostPreview {
-  margin-bottom: 20px;
-}
-
-.blogPreviewBody {
-  max-height: 15rem;
-  overflow: hidden;
-}
-
-.blogPreviewBody h1 {
-  font-size: 1.75rem;
-}
-.blogPreviewBody h2 {
-  font-size: 1.5rem;
-}
-.blogPreviewBody h3 {
-  font-size: 1.25rem;
-}
-.blogPreviewBody h4 {
-  font-size: 1rem;
-}
-.blogPreviewBody h5 {
-  font-size: 1rem;
-}
-
-.sticky .blogPreviewBody {
-  max-height: 20rem;
-}
-
-/* .blogPostPreview.sticky::before {
-  content: "Sticky Post";
-  font-weight: bold;
-  font-size: 0.9em;
-  float: right;
-} */
-
-#adminBar {
-  -webkit-box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
-
-  background-color: #ffffffdd;
-  position: fixed;
-  top: 2vh;
-  right: 2vh;
-  height: 70px;
-  width: 260px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#adminBar p {
-  margin-top: 4px;
-  margin-bottom: 0px;
-}
-#adminBar .btn{
-  margin-left: 5px;
-}
-
 form{
   text-align: left;
 }
@@ -491,35 +380,7 @@ form{
   text-align: right;
 }
 
-nav hr:last-of-type {
-  margin-bottom: 0px;
-}
-
 iframe.page {
-  width: 100%;
-}
-
-#blogPostEditor textarea{
-  width: 100%;
-  position: relative;
-  min-height: 68vh;
-  height: 100%;
-  resize: none;
-  bottom: 1vh;
-}
-
-#postEditorToolbar
-{
-  height: 6vh;
-  width: 100%;
-}
-
-#postEditorToolbar input[type="text"]
-{
-  width: 100%;
-}
-
-#blogPostEditor img {
   width: 100%;
 }
 
@@ -559,6 +420,12 @@ img.circle {
   height: 7.5vh;
 } */
 
+.personCard .right img {
+  height: 30px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
 #social img {
   max-width: 250px;
   display: block;
@@ -588,7 +455,7 @@ iframe {
 }
 
 @media all and (max-width: 734px) {
-  #blog, #blogPost, #login, header, #error404, #social, #about{
+  header, #error404, #home, #people, nav div, footer div {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -613,14 +480,27 @@ iframe {
   }
 
   header h1 {
-    font-size: 3.8vh;
+    font-size: 1em;
   }
 
-  header p {
-    display: none;
+  header img {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  header span {
+    height: 6vh;
   }
 
   .page {
-    height: 84vh;
+    height: 87vh;
+  }
+
+  .personCard .right {
+    width: 72%;
+  }
+  
+  .personCard .left {
+    width: 25%;
   }
 }
