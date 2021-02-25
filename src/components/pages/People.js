@@ -2,12 +2,6 @@ import React from "react"
 import PersonCard from "./people/PersonCard";
 
 export default class About extends React.Component {
-  
-  componentDidMount() {
-    if(window.twttr != null)
-      window.twttr.widgets.load()
-  }
-
   render() {
     return (
       <div id="people" className="centerMargins">

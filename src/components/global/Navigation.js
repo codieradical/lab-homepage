@@ -13,8 +13,8 @@ export default class Navigation extends React.Component {
           {this.props.location.pathname !== "/people" ? <Link to="/people">People</Link> : <span>People</span>}
           <span> | </span>
           {this.props.location.pathname !== "/projects" ? <Link to="/projects">Projects</Link> : <span>Projects</span>}
-          <span> | </span>
-          {this.props.location.pathname !== "/publications" ? <Link to="/publications">Publications</Link> : <span>Publications</span>}
+          {/* <span> | </span>
+          {this.props.location.pathname !== "/publications" ? <Link to="/publications">Publications</Link> : <span>Publications</span>} */}
           {/* <span> | </span>
           {this.props.location.pathname !== "/software" ? <Link to="/software">Software</Link> : <span>Software</span>}
           <span> | </span>

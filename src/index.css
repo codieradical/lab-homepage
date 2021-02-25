@@ -50,7 +50,7 @@ footer {
   min-height: calc(100% - 4vh);
 }
 
- header, #error404, #home, #people {
+ header, #error404, #home, #people, #projects {
   width: 100%;
   max-width: 720px;
 }
@@ -455,7 +455,7 @@ iframe {
 }
 
 @media all and (max-width: 734px) {
-  header, #error404, #home, #people, nav div, footer div {
+  header, #error404, #home, #people, #projects, nav div, footer div {
     padding-left: 15px;
     padding-right: 15px;
   }
