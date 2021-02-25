@@ -21,3 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 public/blog/\._halo_online_1
+
+package-lock.json
