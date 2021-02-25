@@ -49,6 +49,7 @@ export default class About extends React.Component {
           linkedin="codienewark"
           email="codienewark@outlook.com"
           />
+          <br/>
       </div>
   );
   }
